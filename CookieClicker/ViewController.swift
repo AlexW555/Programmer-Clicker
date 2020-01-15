@@ -59,6 +59,15 @@ class ViewController: UIViewController {
             print("Time left \(runCount)")
             runCount += 1
             
+//            if runCount < 1 {
+//            if (state == 0) {
+//                sender.setImage(UIImage(named: "Image-1.png"), for: .normal)
+//                state = 1
+//                } else {
+//                sender.setImage(UIImage(named: "Image-2.png"), for: .normal)
+//                state = 0
+//                    }
+//                }
             if runCount == 3 {
                 timer.invalidate()
             }
