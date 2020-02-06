@@ -79,6 +79,23 @@ class ViewController: UIViewController {
                 numberOfClicks += 1
             }
         numberOfCookies += 1
+        
+        let coloredSquare = UIView()
+        coloredSquare.backgroundColor = UIColor.blue;
+        
+        coloredSquare.frame = CGRect(x: 175, y: 400, width: 50, height: 50)
+        self.view.addSubview(coloredSquare)
+        
+        let final = Int.random(in: 0 ..< 300)
+        let rotationNow = Int.random(in: 0 ..< 360)
+        
+        UIView.animate(withDuration: 1.0, animations: {
+            coloredSquare.backgroundColor = UIColor.red;
+            coloredSquare.frame = CGRect(x: final, y: -50, width: 50, height: 50)
+            coloredSquare.alpha = 0;
+            coloredSquare.transform = CGAffineTransform(rotationAngle: CGFloat(rotationNow))
+        })
+        
         NumOfCookiesLabel.text = "\(numberOfCookies)"
         print(numberOfIntern)
         print(numberOfCookies)
@@ -91,6 +108,29 @@ class ViewController: UIViewController {
     @objc func addCookies(){
         numberOfCookies += 2
         NumOfCookiesLabel.text = "\(numberOfCookies)"
+        
+        let coloredSquare = UIView()
+        coloredSquare.backgroundColor = UIColor.blue;
+        
+        coloredSquare.frame = CGRect(x: -50, y: 600, width: 50, height: 50)
+        /*
+        let lb = UILabel(frame: CGRect(x: -50, y: 600, width: 50, height: 50))
+        lb.text="1";
+        */
+        self.view.addSubview(coloredSquare)
+        //coloredSquare.addSubview(lb)
+        //lb.center = coloredSquare.center;
+        
+        let rotationNow = Int.random(in: 0 ..< 360)
+        
+        UIView.animate(withDuration: 1.0, animations: {
+            coloredSquare.backgroundColor = UIColor.red;
+            coloredSquare.frame = CGRect(x: 400, y: 600, width: 50, height: 50)
+            coloredSquare.alpha = 0;
+            coloredSquare.transform = CGAffineTransform(rotationAngle: CGFloat(rotationNow))
+            //lb.frame = CGRect(x: 400, y: 600, width: 50, height: 50)
+            //lb.transform = CGAffineTransform(rotationAngle: CGFloat(rotationNow))
+        })
     }
 
 // This function is the timer. This sets a timer for 3 seconnds and once it is pressed it cannot be
