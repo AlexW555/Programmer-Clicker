@@ -110,18 +110,13 @@ class ViewController: UIViewController {
         NumOfCookiesLabel.text = "\(numberOfCookies)"
         
         let coloredSquare = UIView()
-        coloredSquare.backgroundColor = UIColor.blue;
-        //coloredSquare.backgroundColor = UIColor(patternImage: UIImage(named: "2.png")!);
+        
+        coloredSquare.backgroundColor = UIColor.blue
         
         coloredSquare.frame = CGRect(x: -50, y: 600, width: 50, height: 50)
-        
-        let lb = UILabel(frame: CGRect(x: -50, y: 600, width: 50, height: 50))
-        lb.text="1jygkyfkhj";
-        lb.textColor = .black
-        
+
         self.view.addSubview(coloredSquare)
-        coloredSquare.addSubview(lb)
-        lb.center = coloredSquare.center;
+        
         
         let rotationNow = Int.random(in: 0 ..< 360)
         
@@ -130,8 +125,6 @@ class ViewController: UIViewController {
             coloredSquare.frame = CGRect(x: 400, y: 600, width: 50, height: 50)
             coloredSquare.alpha = 0;
             coloredSquare.transform = CGAffineTransform(rotationAngle: CGFloat(rotationNow))
-            lb.frame = CGRect(x: 400, y: 600, width: 50, height: 50)
-            lb.transform = CGAffineTransform(rotationAngle: CGFloat(rotationNow))
         })
     }
 
